@@ -1,24 +1,24 @@
 package Student;
 
 public class StudentData {
-    int roll;
-    String name;
-    double m1, m2, m3;
+    private int roll;
+    private String name;
+    double English, science, maths;
 
-    public StudentData(int roll, String name, double m1, double m2, double m3) {
+    public StudentData(int roll, String name, double English, double science, double maths) {
         this.roll = roll;
         this.name = name;
-        this.m1 = m1;
-        this.m2 = m2;
-        this.m3 = m3;
+        this.English = English;
+        this.science = science;
+        this.maths = maths;
     }
 
     public void display() {
         System.out.println("student roll_number" + roll);
         System.out.println("student name" + name);
-        System.out.println("marks in english" + m1);
-        System.out.println("marks in science" + m2);
-        System.out.println("marks in maths" + m3);
+        System.out.println("marks in english" + English);
+        System.out.println("marks in science" + science);
+        System.out.println("marks in maths" + maths);
     }
 
 }
