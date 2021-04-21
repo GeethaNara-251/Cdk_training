@@ -1,7 +1,7 @@
 package Student;
 
 public class MarksCalculator {
-    MarksTotal m = new MarksTotal();
+   private MarksTotal m = new MarksTotal();
 
     public static void main(String[] args) {
     }
