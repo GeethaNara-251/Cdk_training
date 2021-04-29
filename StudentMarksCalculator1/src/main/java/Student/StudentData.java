@@ -3,23 +3,33 @@ package Student;
 public class StudentData {
     private int roll;
     private String name;
-    double English, science, maths;
+    StudentMarks studentmarks;
 
-    public StudentData(int roll, String name, double English, double science, double maths) {
+    public StudentData(int roll, String name, StudentMarks mark) {
         this.roll = roll;
         this.name = name;
-        this.English = English;
-        this.science = science;
-        this.maths = maths;
+        this.studentmarks=mark;
+    }
+    public void setRoll(int roll){
+        this.roll=roll;
+    }
+    public void setName(String name){
+        this.name=name;
+    }
+    public void setStudentmarks(StudentMarks studentmarks){
+        this.studentmarks=studentmarks;
+    }
+    public int getRoll(){
+        return roll;
+    }
+    public String getName(){
+        return name;
+    }
+    public StudentMarks getMarks(){
+        return studentmarks;
     }
 
-    public void display() {
-        System.out.println("student roll_number" + roll);
-        System.out.println("student name" + name);
-        System.out.println("marks in english" + English);
-        System.out.println("marks in science" + science);
-        System.out.println("marks in maths" + maths);
-    }
+
 
 }
 
