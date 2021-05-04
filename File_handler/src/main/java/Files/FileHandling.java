@@ -32,7 +32,7 @@ public class FileHandling {
             e.printStackTrace();
         }
     }
-    public void Wordsearch() {
+    public void Research() {
         try {
             boolean flag = reader.WordPresent(validator, "save");
             System.out.println(".........."+flag+"..........");
@@ -46,7 +46,7 @@ public class FileHandling {
         handle.setFile();
         handle.readFile();
         handle.fileReverse();
-        handle.Wordsearch();
+        handle.Research();
 
     }
 }

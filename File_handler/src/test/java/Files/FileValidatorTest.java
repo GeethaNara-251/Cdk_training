@@ -14,20 +14,24 @@ public class FileValidatorTest {
 
     @Before
     public void setData() {
-        filepath = new String("D:\\Users\\narag\\Environment.txt");
+        filepath = "D:\\Users\\narag\\Environment.txt";
         file = new FileValidator(filepath);
     }
 
     @Test
     public void IfFilepathisEmpty() {
-           assertTrue(!(filepath.isEmpty()));
+        assertFalse(filepath.isEmpty());
         }
     @Test
-    public void IfFilepathEqual() {
+    public void IfFilepathvValid() {
         String path=file.getFilepath();
         assertEquals(path,filepath);
     }
-
+     @Test
+     public void IfFileExist(){
+        File file1=file.getFile();
+        assertTrue(file1.exists());
+     }
     @Test
      public void FileIsReadable(){
         File file1 = file.getFile();
@@ -39,8 +43,22 @@ public class FileValidatorTest {
         boolean flag = reader.WordPresent(file,"Geetha");
         assertFalse(flag);
     }
+    @Test
+    public void WordCheckIrrespectiveOfCase1() throws Exception {
+        reader=new Utilities();
+        boolean flag = reader.WordPresent(file,"Air");
+        assertTrue(flag);
+        }
+    @Test
+    public void WordCheckIrrespectiveOfCase2() throws Exception {
+        reader=new Utilities();
+        boolean flag = reader.WordPresent(file,"air");
+        assertTrue(flag);
+    }
 
-}
+    }
+
+
 
 
 
